@@ -1,0 +1,550 @@
+openapi: 3.1.0
+info:
+  title: Voyage APIs
+  description: REST API for Voyage web application
+  version: "v1.0"
+servers:
+  - url: http://localhost:8080
+paths:
+  /register:
+    post:
+      summary: Register a new user
+      description: Registers a new user in the database.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserDetails"
+            example:
+              firstName: Ion
+              lastName: Bishop
+              email: bishop.i@example.com
+              password: password
+              username: ionbishop
+              contact: "+18709875678"
+      responses:
+        "200":
+          description: Successfully registered.
+          content:
+            application/json:
+              example:
+                message: User registered successfully.
+              schema:
+                properties:
+                  message:
+                    description: User registered successfully.
+                    example: User registered successfully.
+        "404":
+          description: Invalid configuration
+          content:
+            application/json:
+              example:
+                code: "Not Found"
+                message: Required resource not found on the server. Please try again after some time
+              schema:
+                type: object
+                $ref: "#/components/schemas/404_Error"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              example:
+                code: "AuthenticationError"
+                message: Bad request / Invalid Parameters, please check your payload
+              schema:
+                type: object
+                $ref: "#/components/schemas/400_Error"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/500_Error"
+  /login:
+    post:
+      summary: User Login
+      description: Login to the user specific homepage.
+      requestBody:
+        description: User Login
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: User parameters.
+              properties:
+                username:
+                  type: string
+                  description: username entered.
+                password:
+                  type: string
+                  description: password entered.
+              example:
+                username: ionbishop
+                password: password
+      responses:
+        "200":
+          description: Successfully logged in.
+          content:
+            application/json:
+              example:
+                firstName: Ion
+                lastName: Bishop
+                email: bishop.i@example.com
+                username: ionbishop
+                contact: "+18709875678"
+              schema:
+                type: object
+                $ref: "#/components/schemas/User"
+        "404":
+          description: User not found
+          content:
+            application/json:
+              example:
+                code: "Not Found"
+                message: User not found
+              schema:
+                type: object
+                $ref: "#/components/schemas/404_Error"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              example:
+                code: "Authentication Error"
+                message: Bad request, please check your payload
+              schema:
+                type: object
+                $ref: "#/components/schemas/400_Error"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/500_Error"
+  /user:
+    get:
+  /user/{userId}:
+    put:
+      summary: Update user details
+      description: Update the details of a specific user.
+      parameters:
+        - in: path
+          name: userId
+          required: true
+          description: The ID of the user to update.
+          schema:
+            type: integer
+      requestBody:
+        description: Updated user details
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Atleast one update parameter should be present
+              properties:
+                firstName:
+                  type: string
+                  description: updated first name
+                lastName:
+                  type: string
+                  description: updated last name
+                email:
+                  type: string
+                  description: updated email id
+                  format: email
+                password:
+                  type: string
+                  description: updated password
+                username:
+                  type: string
+                  description: updated username
+                contact:
+                  type: string
+                  description: updated contact information
+              example:
+                firstName: Ion
+                lastName: Bishop
+                email: bishop.i@example.com
+      responses:
+        "200":
+          description: Successfully updated user details
+          content:
+            application/json:
+              example:
+                firstName: Ion
+                lastName: Bishop
+                email: bishop.i@example.com
+                username: ionbishop
+                contact: "+18709875678"
+              schema:
+                type: object
+                $ref: "#/components/schemas/User"
+        "404":
+          description: User not found
+          content:
+            application/json:
+              example:
+                code: "Not Found"
+                message: User not found
+              schema:
+                type: object
+                $ref: "#/components/schemas/404_Error"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              example:
+                code: "AuthenticationError"
+                message: Bad request, please check your payload
+              schema:
+                type: object
+                $ref: "#/components/schemas/400_Error"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/500_Error"
+    delete:
+      summary: Delete a user
+      description: Removes a user from the system.
+      parameters:
+        - name: userId
+          in: path
+          description: ID of the user to delete
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: User deleted successfully
+          content:
+            application/json:
+              example:
+                message: User deleted successfully.
+              schema:
+                properties:
+                  message:
+                    description: User deleted successfully.
+                    example: User deleted successfully.
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/404_Error"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/500_Error'
+  /miles:
+    get:
+      summary: Get user miles
+      operationId: get-user-miles
+      description: Fetch all the miles related to a particular user
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/UserMiles"
+        "401":
+          description: Unauthenticated request
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/401_Error"
+        "400":
+          description: Client request Error
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/400_Error"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/500_Error"
+    put:
+  /offers:
+    get:
+    post:    
+  /flights:
+    get:
+      summary: Get flight details
+      description: Get the flight details based on user input.
+      parameters: 
+        - name: date
+          in: query
+          description: Date of the flight
+          required: true
+          example: "2023-11-03"
+          schema:
+            type: string
+            format: date
+        - name: source
+          in: query
+          description:  Source airport code
+          required: true
+          example: "JFK"
+          schema:
+            type: string
+        - name: destination
+          in: query
+          description:  Destination airport code
+          required: true
+          example: "BOM"
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Flight details based on source and destination input
+          content:
+            application/json:
+              example:
+                - flightNumber: "JJLP123"
+                  departureTime: "12:00 PM"
+                  layover: [{departureTime: "11:00 PM", arrivalTime: "9:00 AM",duration: "3hrs",location: "CLK"}]
+                  airline: "British Airways"
+                  price: "$600"
+                - flightNumber: "MMP1256"
+                  departureTime: "11:00 PM"
+                  arrivalTime: "9:00 AM"
+                  airline: "American Airways"
+                  price: "$579"
+              schema:
+                type: array
+                $ref: '#/components/schemas/FlightDetails'   
+        "400":
+          description: Client request Error
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/400_Error'
+        "404":
+          description: No flights found for the given criteria
+          content:
+            application/json:
+              example:
+                code: "Not Found"
+                message: Flight not found
+              schema: 
+                type: object
+                $ref: '#/components/schemas/404_Error' 
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/500_Error'             
+  /searchAirport:
+    get:
+  /booking:
+    post:
+  /coordinates:
+    get:
+  /checkout:
+    post:
+  /subscribe:
+    post:
+  /subscribe/{type}:
+    post:
+components:
+  schemas:
+    UserMiles:
+      type: object
+      properties:
+        userId:
+          type: string
+          examples:
+            - 2xAbC
+        miles:
+          type: string
+          examples:
+            - "220"
+    User:
+      type: object
+      properties:
+        firstName:
+          type: string
+          examples:
+            - "Ion"
+        lastName:
+          type: string
+          examples:
+            - "Bishop"
+        email:
+          type: string
+          examples:
+            - "bishop.i@example.com"
+        username:
+          type: string
+          examples:
+            - "ionb"
+        contact:
+          type: string
+          examples:
+            - "+18709875678"
+    UserDetails:
+      type: object
+      properties:
+        firstName:
+          type: string
+          examples:
+            - "Ion"
+        lastName:
+          type: string
+          examples:
+            - "Bishop"
+        email:
+          type: string
+          examples:
+            - "bishop.i@example.com"
+        username:
+          type: string
+          examples:
+            - "ionb"
+        password:
+          type: string
+          examples:
+            - "password"
+        contact:
+          type: string
+          examples:
+            - "+18709875678"
+    Layover:
+      type: array
+      properties:
+        location:
+          type: string
+          description: location of the layover
+        departureTime:
+          type: string
+          format: time
+          description: Departure time
+          examples:
+           - "07:00 PM"
+        arrivalTime:
+          type: string
+          format: time
+          description: Arrival time
+          examples:
+           - "11:00 AM"
+        duration:
+          type: string
+          description: Duration of the layover
+          examples:
+           - "2hrs"
+    FlightDetails:
+      type: array
+      examples:
+            - location: "LHR"
+              departureTime: "12:00 PM"
+              arrivalTime: "9:00 PM"
+              duration: "3 hrs"
+            - location: "LHR"
+              departureTime: "12:00 PM"
+              arrivalTime: "9:00 PM"
+              duration: "1 hrs"
+      properties:
+        flightNumber:
+          type: string
+          description: Flight number
+          examples:
+           - "JUK09827"
+        departureTime:
+          type: string
+          format: time
+          description: Departure time
+          examples:
+           - "07:00 PM"
+        layover:
+          type: array
+          description: layover details
+          schema:
+            type: array
+            $ref: '#/components/schemas/Layover'  
+        arrivalTime:
+          type: string
+          format: time
+          description: Arrival time
+          examples:
+           - "11:00 AM"
+        airline:
+          type: string
+          description: Airline name
+          examples:
+           - "Jet Airways"
+        price:
+          type: string
+          description: Ticket fare
+          examples:
+           - "$600"
+    400_Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+          examples:
+            - AuthenticationError
+        message:
+          type: string
+          description: Error message
+          examples:
+            - User is not authenticated
+    404_Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+          example: NotFoundError
+        message:
+          type: string
+          description: Error message
+          example: User not found
+    401_Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+          examples:
+            - ClientRequestError
+        message:
+          type: string
+          description: Error message
+          examples:
+            - Client request is incorrect
+    500_Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+          examples:
+            - ServerError
+        message:
+          type: string
+          description: Error message
+          examples:
+            - Internal Server Error
