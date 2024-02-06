@@ -1,0 +1,10 @@
+.searchHeader {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchType {
+    text-align: left;
+    color: #4682B4;
+}
+

@@ -1,0 +1,226 @@
+.main-container{
+    margin: 0;
+    padding: 0;
+}
+
+.adjust{
+    position: relative;
+    margin-left: 250px;
+    margin-top: -250px;
+}
+
+.background-image-profile {
+    position: absolute;
+    width: 1000px;
+    height: 560px;
+    margin-left: -65px;
+    background-image: url('../../assets/wal2.jpg'); /* Replace with the actual path */
+    background-size: 100% 100%; 
+    z-index: -1;
+    opacity: 2; /* Adjust the opacity as needed */
+}
+
+
+.Heading{
+    z-index: 1 !important; 
+    background-image: url('../../assets/background.png'); /* Replace with the actual path */
+    color: #cfe8fc;
+    border-radius: 10px;
+    height: 300px;
+    width: 500px;
+    font-size: 30px;
+    font-weight: 1000;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 35px;
+}
+
+.common{
+    z-index: 1 !important;
+    position: relative;
+    margin-top: -300px;
+    margin-left: 50px;
+
+}
+.Heading1{
+    color: #cfe8fc;
+    font-size: 100px;
+    font-weight: 1000;
+    text-shadow: 0 0 5px darkblue;
+}
+.Heading2{
+    z-index: 1 !important; 
+    color: #cfe8fc;
+    font-size: 100px;
+    font-weight: 1000;
+    position: relative;
+    margin-top: -50px;
+    text-shadow: 0 0 5px darkblue;
+}
+
+.first-name{
+    z-index: 2 !important;
+    position: relative;
+    top: 20px;
+    margin-left: 350px;
+    color: white;
+    font-weight: 750;
+}
+
+.first-name-text{
+    z-index: 2 !important; 
+    position: relative;
+    top: 35px;
+    left: 350px;
+}
+
+.last-name{
+    z-index: 2 !important; 
+    position: relative;
+    top: -60px;
+    margin-left: 650px;
+    color: white;
+    font-weight: 750;
+}
+
+.last-name-text{
+    z-index: 2 !important; 
+    position: relative;
+    top: -45px;
+    left: 650px ;
+}
+
+.phone{
+    z-index: 2 !important; 
+    position: relative;
+    top: -30px;
+    margin-left: 350px;
+    color: white;
+    font-weight: 750;
+}
+
+.phone-text{
+    z-index: 2 !important; 
+    position: relative;
+    top: -12px;
+    left: 345px;
+    color: white;
+}
+
+.email{
+    z-index: 2 !important; 
+    position: relative;
+    top: -110px;
+    margin-left: 650px;
+    color: white;
+    font-weight: 750;
+}
+
+.email-text{
+    z-index: 2 !important; 
+    position: relative;
+    top: -93px;
+    left: 650px;
+}
+
+.mile-points{
+    z-index: 2 !important; 
+    position: relative;
+    top: -70px;
+    margin-left: 350px;
+    color: white;
+    font-weight: 750;
+}
+
+.mile-points-text{
+    z-index: 2 !important; 
+    position: relative;
+    top: -60px;
+    left: 350px;
+}
+
+.user-category{
+    z-index: 2 !important; 
+    position: relative;
+    top: -150px;
+    margin-left: 650px;
+    color: white;
+    font-weight: 750;
+}
+
+.user-category-text{
+    z-index: 2 !important; 
+    position: relative;
+    top: -140px;
+    left: 650px;
+}
+
+.password-profile{
+    z-index: 2 !important;
+    position: relative;
+    top: -120px;
+    margin-left: 350px;
+    color: white;
+    font-weight: 750;
+}
+
+.password-text{
+    z-index: 2 !important; 
+    position: relative;
+    top: -110px;
+    left: 350px;
+}
+
+.buttons{
+    z-index: 2 !important; 
+    position: absolute;
+    left: 950px;
+    top: 480px;
+}
+
+.thevideo {
+    position: absolute !important;
+    z-index: 1 !important; 
+    height: 90vh !important; /* Full height of the viewport */
+    top: 30px !important;
+    left: 0 !important;
+    margin-left: 310px !important;
+    padding: 0 !important;
+    border-radius: 1rem;
+}
+
+.plane-profile{
+z-index: 2 !important; 
+position: absolute;
+width: 300px;
+top: 50px;
+left: 550px;
+}
+
+.popup {
+/* Add your styles for the Popover content here */
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+position: relative;
+margin-top: -300px;
+margin-left: -200px;
+}
+
+.bold-button {
+    font-weight: bold;
+  }
+
+.arrowBackIcon {
+width: 100px; /* Adjust the size as needed */
+color: rgb(0, 0, 0);      /* Change the color as needed */
+position: relative;
+top: -490px;
+left: 1420px;
+z-index: 2 !important; 
+font-size: 30rem; 
+cursor: pointer;
+}
+
+/* styles.css */
+div .MuiSvgIcon-root.arrowBackIcon {
+    font-size: 3rem;  /* Adjust the size as needed */
+  }

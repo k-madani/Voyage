@@ -1,0 +1,51 @@
+.header-logo{
+
+    position: relative;
+    right: -700px;
+}
+
+.Thankyou-statement{
+    top:350px;
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 630px;
+}
+
+.trip-title{
+    font-weight: bold;
+    position: absolute;
+    top: 280px;
+    left: 720px;
+
+}
+
+.to-title{
+    font-weight: bold;
+    position: absolute;
+    top: 330px;
+    left: 500px;
+
+}
+
+.from-title{
+    font-weight: bold;
+    position: absolute;
+    top: 330px;
+    left: 980px;
+
+}
+
+.duration-title{
+    font-weight: bold;
+    position: absolute;
+    top: 500px;
+    left: 700px;
+}
+
+.category-title{
+    font-weight: bold;
+    position: absolute;
+    top: 540px;
+    left: 700px;
+}

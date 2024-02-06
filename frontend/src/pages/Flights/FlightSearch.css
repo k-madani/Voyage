@@ -1,0 +1,233 @@
+.flight-search-details {
+  width: 86.5em !important;
+  max-width: 100% !important;
+  background-color: #f0f0f0;
+  height: 3em;
+  padding-left: 60em !important;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  margin-left: 1.5em !important;
+  direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.accordion {
+  min-height: 200px;
+  width: 20em !important;
+  float: left;
+}
+
+.flight-search-params {
+  margin-left: -57em !important;
+  width: 80em !important;
+  position: relative;
+  top: 0.7em;
+}
+
+.search-button {
+  position: relative !important;
+  top: -1.3em !important;
+  margin-left: 15.5em;
+  margin-top: 0.7em;
+}
+
+.flight-connection-container {
+  border-bottom: 2.5px solid #ccc;
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Updated to space-between */
+}
+
+.flight-connection-dot {
+  height: 10px; /* Adjust the size of the dot */
+  width: 10px; /* Adjust the size of the dot */
+  background-color: #000; /* Adjust the color of the dot */
+  border-radius: 50%;
+  position: absolute;
+}
+
+.icon-airplane {
+  position: absolute !important;
+  right: 0 !important;
+  margin-right: 18.5em !important;
+  transform: rotate(90deg);
+  color: lightblue;
+  margin-left: 10;
+}
+
+.icon-airplane-sched {
+  position: absolute !important;
+  right: 0 !important;
+  margin-right: 34.5em !important;
+  transform: rotate(90deg);
+  color: lightblue;
+}
+
+.travel-duration {
+  margin-left: 2.1em !important;
+}
+
+.typography-logo {
+  font-weight: bolder !important;
+  display: flex;
+  align-items: center;
+  font-size: small !important;
+}
+
+.transit-type {
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  align-content: center;
+  margin-left: 2.2em !important;
+}
+.search-param-source {
+  font-size: large !important;
+  font-weight: bold !important;
+  font-family: serif !important;
+  text-transform: capitalize;
+}
+
+.search-param-destination {
+  font-size: large !important;
+  font-weight: bold !important;
+  font-family: serif !important;
+  text-transform: capitalize;
+}
+
+.itinerary-sched {
+  margin-bottom: 2em;
+}
+
+.search-param-date {
+  font-weight: bold !important;
+  margin-left: 50em !important;
+  font-size: large !important;
+}
+
+.search-param-flight {
+  transform: rotate(90deg);
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 0.1em;
+}
+
+.typo-operatedby {
+  margin-top: 2.5em !important;
+  color: #a5afb7;
+  font-weight: bold !important;
+}
+.flightcard-container {
+  min-height: 200px;
+  width: 70em !important;
+  float: left;
+}
+
+.card-content {
+  width: 67em !important;
+  float: right;
+}
+
+.grid-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1em !important;
+  min-height: 180px;
+}
+
+.grid-operator-details {
+  padding-left: 5em !important;
+}
+
+.image {
+  width: 34px;
+  height: 35px;
+  margin-right: 8px;
+  margin-left: 3.3em;
+  padding: 1em;
+}
+
+.typo-timings {
+  font-weight: bold !important;
+}
+
+.typo-city {
+  font-size: large;
+  padding-top: 0.5em;
+}
+
+.grid-departure-timings,
+.grid-arrival-timings {
+  margin-top: 1.5em !important;
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+}
+
+.grid-transit {
+  margin-top: 1em !important;
+  padding-left: 6em !important;
+}
+
+.icon-airplane {
+  font-size: 24px; /* Set the desired font size for the airplane icon */
+  margin-right: 8px; /* Adjust margin as needed */
+}
+
+.grid-price {
+  margin-top: 1.5em !important;
+  align-items: center;
+}
+
+.flight-price {
+  font-weight: bold !important;
+  margin-bottom: 2px !important;
+  font-size: x-large !important;
+  color: #4682b4;
+}
+
+.btn-select-itinerary {
+  margin-top: 1em !important;
+  background-color: #4682b4 !important;
+  color: #fff !important;
+  padding: 8px 16px !important;
+}
+
+.search-button:hover {
+  cursor: pointer;
+  background: #f5f5f5;
+  padding: 0.2em;
+  border-radius: 0.3em;
+  margin-top: 0.45em !important;
+}
+
+.typo-operatedby-sched {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em !important;
+  color: #a5afb7;
+  font-weight: bold !important;
+}
+
+.image-sched {
+  width: 34px;
+  height: 35px;
+  margin-right: 8px;
+  padding: 1em;
+}
+
+.divider-sched {
+  margin: 1.5em !important;
+}
+
+.timeline-container {
+  float: left;
+  margin-left: -35em;
+}
+
+.timeline-opposite-content {
+  margin-top: 2em !important;
+}

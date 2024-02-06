@@ -1,0 +1,39 @@
+.home {
+    padding-top: 2rem;
+    text-align: center;
+    gap: 2rem;
+    flex-direction: column;
+
+    .mainText {
+        color: rgb(47, 90, 115);
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 4rem;
+        font-family: 'fantasy'
+    }
+
+    .homeImages {
+        width: 100%;
+        margin: 1rem auto 0;
+        /* justify-content: center;
+        align-items: center; */
+        position: relative;
+        border-radius: 30rem;
+
+        .videoDiv {
+            
+            .video{
+                height: 600px;
+                /* width: 100%; */
+                border-radius: 30rem;
+            }
+        }
+
+        .plane{
+            position: absolute;
+            width: 85%;
+            top: -10%;
+            left: 15%;
+        }
+    }
+}

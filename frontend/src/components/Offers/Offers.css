@@ -1,0 +1,47 @@
+/* Offers.css */
+
+.offers-container {
+  max-width: 450px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  position: relative;
+}
+
+h3 {
+  text-align: center;
+  color: #4682b4;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.offer-slide {
+  text-align: center;
+  padding: 22px;
+  position: relative;
+}
+
+.offer-slide img {
+  max-width: 100%;
+  height: auto;
+  max-height: 150px;
+  margin-bottom: 20px;
+}
+
+.copied-span {
+  color: #4caf50;
+  font-weight: 600;
+  font-size: 18px;
+  padding-right: 60px;
+}
+
+.copy {
+  text-align: center;
+  color: #4c99af;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  padding-right: 60px;
+}

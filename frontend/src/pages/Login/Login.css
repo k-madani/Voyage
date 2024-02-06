@@ -1,0 +1,143 @@
+.container-login{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 40px; 
+    margin-right: 340px;
+    width: 400px;
+    background-color: #1c3c74;
+    border-radius: 30px;
+    padding-bottom: 30px;
+    height: 380px;
+    position: relative;
+    left: 250px;
+    z-index: 1;
+} 
+
+
+.background-image-login {
+    content: "";
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 250px;
+    border-radius: 30px;
+    width: 70%;
+    height: 75%;
+    background-image: url('../../assets/loginbackground.jpg');
+    background-size: cover;
+    z-index: 0;
+    opacity: 5;
+}
+
+.background-image2 {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/wal2.jpg'); 
+    background-size: 100% 100%; 
+    z-index: 0;
+    opacity: 2; 
+}
+
+.login-page{
+    position: relative;
+    margin-left: -47px;
+}
+
+.text-login {
+    color: azure;
+    font-size: 150px;
+    font-weight: 360;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 792px;
+    z-index: 2;
+    line-height: 1; /* Adjust the line-height to reduce the gap */
+}
+
+.textlogin {
+    color: azure;
+    font-size: 150px;
+    font-weight: 360;
+    position: absolute;
+    margin-top: 140px;
+    left: 800px;
+    z-index: 2;
+    line-height: 1; /* Adjust the line-height to reduce the gap */
+}
+
+.inputs-login{
+    margin-top: 55px;
+    display: flex;
+    margin-left: 0px;
+    align-self: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-login{
+    display: flex;
+    align-items: center;
+    height: 55px;
+    margin-top: 10px;
+    border-radius: 6px;
+    color: white;
+    margin-right: -90px;
+}
+
+.input-login input{
+    left: -50px;
+    margin-top: 60px;
+    height: 30px;
+    width: 250px;
+    background: transparent;
+    position: relative;
+    border: none;
+    outline: none;
+    color: #1e81b0;
+    font-size: 15px;
+    border-bottom: 1px solid #44bcd8;
+}
+
+.password-login input{
+    margin-left: -80px;
+
+}
+
+.submit-container-login{
+    display: flex;
+    gap: 30px;
+    margin: 60px auto;
+}
+
+.submit-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+    color: #1e81b0;
+    background: white;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.input-login input::placeholder {
+    color: #1e81b0; /* Replace with your desired color */
+}
+
+.forgot-password{
+    padding-left: 155px;
+    margin-top: 5px;
+    color:azure;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.input-login input[type="password"] {
+    margin-left: -30px; /* Adjust the margin to move the email input to the right */
+}
