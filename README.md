@@ -66,7 +66,7 @@ To set up the project, follow these steps:
 
 ## Domain Driven Design
 
-![voyage (2)](https://github.com/info-6150-fall-2023/final-project-kapz/assets/144556337/bc0ff422-4069-4108-83d0-9d90e6b2ac47)
+![Voyage](voyage.jpg)
 
 ### Authors
 
